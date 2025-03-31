@@ -1,7 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy Gastronomia Section
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'nueva-seccion-gastronomia/**'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -11,4 +13,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: tu-carpeta-específica
+          folder: nueva-seccion-gastronomia
+          clean: true
